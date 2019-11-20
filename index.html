@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- Latest compiled and minified CSS -->
+ <!-- 3.3.7 -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ <!-- Optional theme -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+ <link rel="stylesheet" href="css/style.css">
+ <!-- <script type="text/javascript" src="JS/javascript.js"></script> -->
+ <title>ToDay</title>
+</head>
+<body>
+ <header>
+   <h1>TODAY</h1>
+ </header>
+ <div id="test" class="container">
+   <script>
+     var today = new Date(); // Date() インスタンス化（実態）
+     // var newYaer = new Date(2019, 0, 1);
+     // console.log(newYaer);
+     // document.write('<p> 今日は、' + today.getDate() + '日です</p>')
+     /*
+       getMonth 一月を０として取得するので０オリジン
+     */
+     var todayHtml = today.getFullYear() + '/' + (today.getMonth() + 1) + '/' + today.getDate() + "  " + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+     document.write('<p class="date">' + todayHtml + '</p>')
+   </script>
+   <!-- <p class="date"> 20xx/03/01 </p> -->
+ </div>
+</body>
+</html>
+
+
